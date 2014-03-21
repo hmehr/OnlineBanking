@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity.ModelConfiguration;
+using System.Linq;
+using System.Text;
+using INSE6260.OnlineBanking.Model;
+
+namespace INSE6260.OnlineBanking.Repository.EF.Mappings
+{
+    public class CustomerTypeConfiguration : EntityTypeConfiguration<Customer>
+    {
+        
+        public CustomerTypeConfiguration()
+        {
+            HasKey(cust => cust.CustomerID);
+            Property(d => d.Name).IsRequired().HasMaxLength(50);
+            Property(d => d.Family).IsRequired().HasMaxLength(50);
+            Property(d => d.Email).IsOptional().HasMaxLength(50);
+            HasMany(c => c.Accounts).WithRequired(t => t.Customer).Map(m=>m.MapKey("CustomerID"));
+        }
+
+        
+    }
+}

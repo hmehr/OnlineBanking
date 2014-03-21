@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INSE6260.OnlineBanking.Infrastructure", "INSE6260.OnlineBanking.Infrastructure\INSE6260.OnlineBanking.Infrastructure.csproj", "{A5A86939-E493-45BB-9D03-C2852795787C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INSE6260.OnlineBanking.Repository.EF", "INSE6260.OnlineBanking.Repository.EF\INSE6260.OnlineBanking.Repository.EF.csproj", "{6676E0AA-2083-4556-8472-6DF06D5DB6F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INSE6260.OnlineBanking.Model", "INSE6260.OnlineBanking.Model\INSE6260.OnlineBanking.Model.csproj", "{4767C638-7FAB-4898-A60E-60157169793F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INSE6260.OnlineBanking.Repository.EF.Test", "INSE6260.OnlineBanking.Repository.EF.Test\INSE6260.OnlineBanking.Repository.EF.Test.csproj", "{EF1B5CB6-F7EF-4ABB-985C-20A414649DC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A3BAE485-47A2-4F6A-80C8-FA98A44DB3E0}"
+	ProjectSection(SolutionItems) = preProject
+		INSE6260.OnlineBanking.vsmdi = INSE6260.OnlineBanking.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INSE6260.OnlineBanking.Service", "INSE6260.OnlineBanking.Service\INSE6260.OnlineBanking.Service.csproj", "{A6A9EBE3-D617-41D5-A029-4C55CB4ABB25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INSE6260.OnlineBanking.Controllers", "INSE6260.OnlineBanking.Controllers\INSE6260.OnlineBanking.Controllers.csproj", "{87A1B21D-6737-4708-B897-300D4CA1F2BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INSE6260.OnlineBanking.Web.MVC", "INSE6260.OnlineBanking.Web.MVC\INSE6260.OnlineBanking.Web.MVC.csproj", "{33662D53-8DD3-4CA9-B4E5-FEAB933AA205}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INSE6260.OnlineBanking.Web.MVC.Tests", "INSE6260.OnlineBanking.Web.MVC.Tests\INSE6260.OnlineBanking.Web.MVC.Tests.csproj", "{CA4CFFB0-1860-4C5B-8F86-1717300D8CD1}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = INSE6260.OnlineBanking.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5A86939-E493-45BB-9D03-C2852795787C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5A86939-E493-45BB-9D03-C2852795787C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5A86939-E493-45BB-9D03-C2852795787C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5A86939-E493-45BB-9D03-C2852795787C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6676E0AA-2083-4556-8472-6DF06D5DB6F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6676E0AA-2083-4556-8472-6DF06D5DB6F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6676E0AA-2083-4556-8472-6DF06D5DB6F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6676E0AA-2083-4556-8472-6DF06D5DB6F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4767C638-7FAB-4898-A60E-60157169793F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4767C638-7FAB-4898-A60E-60157169793F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4767C638-7FAB-4898-A60E-60157169793F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4767C638-7FAB-4898-A60E-60157169793F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF1B5CB6-F7EF-4ABB-985C-20A414649DC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF1B5CB6-F7EF-4ABB-985C-20A414649DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF1B5CB6-F7EF-4ABB-985C-20A414649DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF1B5CB6-F7EF-4ABB-985C-20A414649DC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6A9EBE3-D617-41D5-A029-4C55CB4ABB25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6A9EBE3-D617-41D5-A029-4C55CB4ABB25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6A9EBE3-D617-41D5-A029-4C55CB4ABB25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6A9EBE3-D617-41D5-A029-4C55CB4ABB25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87A1B21D-6737-4708-B897-300D4CA1F2BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87A1B21D-6737-4708-B897-300D4CA1F2BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87A1B21D-6737-4708-B897-300D4CA1F2BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87A1B21D-6737-4708-B897-300D4CA1F2BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33662D53-8DD3-4CA9-B4E5-FEAB933AA205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33662D53-8DD3-4CA9-B4E5-FEAB933AA205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33662D53-8DD3-4CA9-B4E5-FEAB933AA205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33662D53-8DD3-4CA9-B4E5-FEAB933AA205}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA4CFFB0-1860-4C5B-8F86-1717300D8CD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA4CFFB0-1860-4C5B-8F86-1717300D8CD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA4CFFB0-1860-4C5B-8F86-1717300D8CD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA4CFFB0-1860-4C5B-8F86-1717300D8CD1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal

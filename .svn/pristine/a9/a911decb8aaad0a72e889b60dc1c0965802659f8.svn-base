@@ -1,0 +1,10 @@
+﻿using System;
+using INSE6260.OnlineBanking.Infrastructure.Domain;
+
+namespace INSE6260.OnlineBanking.Model.Customers
+{
+    public interface ICustomerRepository : IRepository<Customer>
+    {
+        Customer GetFirstCustomerStartWith(string start);
+    }
+}

@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace INSE6260.OnlineBanking.Service.ViewModels
+{
+    public class ClientView
+    {
+        public Int32 ClientID { get; set; }
+        public String Name { get; set; }
+        public String Family { get; set; }
+        public String Email { get; set; }
+        public virtual IEnumerable<AccountView> Accounts { get; set; }
+    }
+}

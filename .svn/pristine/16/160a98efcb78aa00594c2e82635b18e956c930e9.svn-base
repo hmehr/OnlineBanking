@@ -1,0 +1,27 @@
+﻿using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
+using INSE6260.OnlineBanking.Model;
+using INSE6260.OnlineBanking.Model.Accounts;
+using INSE6260.OnlineBanking.Repository.EF.Mappings;
+
+namespace INSE6260.OnlineBanking.Repository.EF
+{
+    public class OnlineBankingDataContext : DbContext
+    {
+        public OnlineBankingDataContext(string connectionName): base(connectionName)
+        {
+            
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<OnlineBankingDataContext>());
+        }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new CustomerTypeConfiguration());
+            modelBuilder.Configurations.Add(new AccountTypeConfiguration());
+        }
+        public DbSet<Customer> Customers { get; set; }
+
+        public DbSet<Account> Accounts { get; set; }
+       
+       
+    }
+}

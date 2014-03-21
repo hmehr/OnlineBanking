@@ -1,0 +1,56 @@
+﻿@model INSE6260.OnlineBanking.Service.Messaging.GetClientResponse
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Detail</h2>
+
+<fieldset>
+    <legend>Client</legend>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Client.Name)
+    </div>
+
+    <div class="display-label">Family</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Client.Family)
+    </div>
+
+    <div class="display-label">Email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Client.Email)
+    </div>
+</fieldset>
+<fieldset >
+    <legend>Client Accounts</legend>
+<br/>
+<table>
+    <tr >
+        <th>
+            Account ID
+        </th>
+        <th>
+            Balance
+        </th>
+    </tr>
+    @foreach(var account in Model.Accounts)
+    {
+        <tr>
+            
+            <td>
+                 @Html.DisplayFor(modelItem => account.AccountID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => account.Balance)
+            </td>
+        </tr>
+    }
+</table>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Client.ClientID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

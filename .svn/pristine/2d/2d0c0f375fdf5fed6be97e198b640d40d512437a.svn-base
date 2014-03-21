@@ -1,0 +1,10 @@
+﻿using INSE6260.OnlineBanking.Service.Messaging;
+using INSE6260.OnlineBanking.Service.Messaging.ClientService;
+
+namespace INSE6260.OnlineBanking.Service.Interfaces
+{
+    public interface IClientService
+    {
+        GetClientResponse GetClient(GetClientRequest request);
+    }
+}

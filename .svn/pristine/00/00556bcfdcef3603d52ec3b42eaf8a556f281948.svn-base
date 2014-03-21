@@ -1,0 +1,26 @@
+﻿@model INSE6260.OnlineBanking.Service.Messaging.GetClientResponse
+@{
+    ViewBag.Title = "Client Detail";
+}
+
+<h2>@ViewBag.Message</h2>
+<p>
+    <h1>Welcome to Online Banking </h1>
+</p>
+<br/>
+<p>------------------------------------------------</p>
+<h1>Client : @Model.Client.Name -- @Model.Client.Family</h1>
+<br/>
+<table>
+    <tr>
+        <td> Account ID </td>
+        <td> Balance </td>
+    </tr>
+    @foreach(var account in Model.Accounts)
+    {
+        <tr>
+            <td>@account.AccountID</td>
+            <td>@account.Balance</td>
+        </tr>
+    }
+</table>

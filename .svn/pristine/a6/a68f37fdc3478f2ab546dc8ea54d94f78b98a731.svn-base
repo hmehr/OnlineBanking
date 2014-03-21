@@ -1,0 +1,39 @@
+﻿@model INSE6260.OnlineBanking.Service.Messaging.GetClientResponse
+@{
+    ViewBag.Title = "Client Detail";
+}
+<p>
+    <h1>
+        Welcome to Online Banking
+    </h1>
+</p>
+<br />
+@if (Model.Client != null)
+{
+    <h1>
+        
+        Client : @Html.DisplayFor(modelItem => Model.Client.Name), @Html.DisplayFor(modelItem => Model.Client.Family)
+    </h1>
+    <br />
+    <table>
+        <tr>
+            <th>
+                Account ID
+            </th>
+            <th>
+                Balance
+            </th>
+        </tr>
+        @foreach (var account in Model.Accounts)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => account.AccountID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => account.Balance)
+                </td>
+            </tr>
+        }
+    </table>
+}

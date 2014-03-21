@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5A86939-E493-45BB-9D03-C2852795787C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>INSE6260.OnlineBanking.Infrastructure</RootNamespace>
+    <AssemblyName>INSE6260.OnlineBanking.Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.4.3.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authentication\InvaliLoginInfoException.cs" />
+    <Compile Include="Authentication\User.cs" />
+    <Compile Include="Configuration\ApplicationSettingsFactory.cs" />
+    <Compile Include="Configuration\IApplicationSettings.cs" />
+    <Compile Include="Configuration\WebConfigApplicationSettings.cs" />
+    <Compile Include="CookieStorage\CookieStorageService.cs" />
+    <Compile Include="CookieStorage\ICookieStorageService.cs" />
+    <Compile Include="Domain\BusinessRule.cs" />
+    <Compile Include="Domain\EntityBase.cs" />
+    <Compile Include="Domain\IRepository.cs" />
+    <Compile Include="Domain\ValueObjectBase.cs" />
+    <Compile Include="Domain\ValueObjectIsInvalidException.cs" />
+    <Compile Include="Email\EmailServiceFactory.cs" />
+    <Compile Include="Email\IEmailService.cs" />
+    <Compile Include="Email\SMTPService.cs" />
+    <Compile Include="Email\TextLoggingEmailService.cs" />
+    <Compile Include="Helpers\ConstantsHelper.cs" />
+    <Compile Include="Helpers\PriceHelper.cs" />
+    <Compile Include="Helpers\UrlHelper.cs" />
+    <Compile Include="IAggregateRoot.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\Log4NetAdapter.cs" />
+    <Compile Include="Logging\LoggingFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Specifications\AdHocSpecification.cs" />
+    <Compile Include="Specifications\AndSpecification.cs" />
+    <Compile Include="Specifications\CompositeSpecification.cs" />
+    <Compile Include="Specifications\ExpressionExtensions.cs" />
+    <Compile Include="Specifications\NotSpecification.cs" />
+    <Compile Include="Specifications\OrSpecification.cs" />
+    <Compile Include="Specifications\ParametersRebinder.cs" />
+    <Compile Include="Specifications\SpecificationBase.cs" />
+    <Compile Include="Specifications\TrueSpecification.cs" />
+    <Compile Include="UnitofWork\IUnitOfWork.cs" />
+    <Compile Include="UnitofWork\IUnitOfWorkRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,59 @@
+﻿using System.Web.Mvc;
+using System.Web.Routing;
+using INSE6260.OnlineBanking.Controllers;
+using INSE6260.OnlineBanking.Infrastructure.Configuration;
+using INSE6260.OnlineBanking.Infrastructure.Email;
+using INSE6260.OnlineBanking.Infrastructure.Logging;
+using INSE6260.OnlineBanking.Repository.EF;
+using StructureMap;
+
+namespace INSE6260.OnlineBanking.Web.MVC
+{
+    
+
+    public class MvcApplication : System.Web.HttpApplication
+    {
+        public static void RegisterGlobalFilters(GlobalFilterCollection filters)
+        {
+            filters.Add(new HandleErrorAttribute());
+        }
+
+        public static void RegisterRoutes(RouteCollection routes)
+        {
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapRoute(
+                "Default", // Route name
+                "{controller}/{action}/{id}", // URL with parameters
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+            );
+
+        }
+
+        protected void Application_Start()
+        {
+            AreaRegistration.RegisterAllAreas();
+
+            RegisterGlobalFilters(GlobalFilters.Filters);
+            RegisterRoutes(RouteTable.Routes);
+
+            DbContextFactory.SetupDbConnection("OnlineBanking");
+
+            Service.AutoMapperBootStrapper.ConfigureAutoMapper();
+
+            BootStrapper.ConfigureDependencies();
+
+            ApplicationSettingsFactory.InitializeApplicationSettingsFactory
+                                  (ObjectFactory.GetInstance<IApplicationSettings>());
+
+            LoggingFactory.InitializeLogFactory(ObjectFactory.GetInstance<ILogger>());
+
+            EmailServiceFactory.InitializeEmailServiceFactory
+                                  (ObjectFactory.GetInstance<IEmailService>());
+
+            ControllerBuilder.Current.SetControllerFactory(new IoCControllerFactory());
+
+            LoggingFactory.GetLogger().Log("Application Started");
+        }
+    }
+}
